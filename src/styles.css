@@ -25,3 +25,45 @@ h1, h2, h3, p { margin-top: 0; } h1 { font-size: clamp(28px, 4vw, 38px); line-he
 .result-section { margin-top: 42px; padding: 30px; border-radius: 26px; background: #fff4e6; border: 1px solid #f4dfc8; }.score { text-align: right; background: #fff; color: #e5674d; border-radius: 17px; padding: 9px 16px; }.score b { display: block; font-size: 27px; line-height: 1; }.score span { font-size: 10px; color: #8d8990; }.demo-note { padding: 9px 12px; background: #fff8d8; color: #756530; border-radius: 9px; font-size: 12px; margin: 18px 0 0; }.result-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 18px; margin-top: 19px; }.source-mini, .readout { padding: 21px; }.source-mini img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; }.readout h3 { display: flex; justify-content: space-between; align-items: center; }.confidence { color: #bc8153; background: #fff1df; padding: 5px 7px; border-radius: 8px; font-size: 10px; font-weight: normal; }.char-row { min-height: 86px; border-radius: 12px; padding: 17px; display: flex; flex-wrap: wrap; align-items: center; background: #fbf9f5; }.char { display: inline-grid; place-items: center; margin: 3px; width: 38px; height: 44px; border-radius: 9px; font-size: 25px; font-family: 'Nanum Pen Script', cursive; }.space { width: 13px; }.good { color: #328a65; background: #e3f5e9; }.wrong { color: #df5d52; background: #ffe5e2; }.uncertain { color: #b47a1b; background: #ffefbe; }.legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 13px 0; font-size: 11px; color: #697582; }.legend span { display: flex; align-items: center; gap: 5px; }.legend i { width: 9px; height: 9px; border-radius: 3px; }.feedback { display: flex; gap: 9px; align-items: flex-start; padding: 12px; border-radius: 10px; background: #fff8e8; color: #826d48; font-size: 13px; }.feedback p { margin: 0; line-height: 1.5; }.teacher-note { margin-top: 16px; }.teacher-note label { display: block; font-size: 13px; font-weight: bold; color: #697482; }.teacher-note textarea { width: 100%; min-height: 58px; margin-top: 7px; padding: 10px; resize: vertical; border: 1px solid #e8ddd0; border-radius: 10px; outline-color: #ef755a; }.result-actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 17px; }
 .teacher-view h1 { margin-bottom: 30px; }.stats-grid { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 15px; }.stat { padding: 20px; display: flex; align-items: center; gap: 13px; }.stat > span { font-size: 26px; }.stat b, .stat small { display: block; }.stat b { color: #e1654e; font-size: 22px; }.stat small { color: #84909d; margin-top: 4px; font-size: 11px; }.stat.wide b { font-size: 16px; color: #536070; }.records { margin-top: 22px; overflow: hidden; }.records-header { padding: 22px 25px; border-bottom: 1px solid #f1ebe4; }.records-header h2 { margin: 0 0 5px; font-size: 18px; }.records-header p { margin: 0; color: #8b949d; font-size: 12px; }.records-header > span { padding: 7px 10px; border-radius: 10px; color: #e3654e; background: #fff0ea; font-size: 12px; }.record { display: flex; align-items: center; gap: 12px; padding: 18px 25px; border-bottom: 1px solid #f4eee9; }.record-avatar { margin: 0; width: 34px; height: 34px; }.record p, .record small { display: block; margin: 2px 0; color: #75808e; font-size: 12px; }.record small { color: #a0a5aa; }.record strong { margin-left: auto; color: #e16a52; font-size: 15px; }.empty-record { padding: 65px 20px; text-align: center; color: #9ba1a8; line-height: 1.7; font-size: 13px; }
 @media (max-width: 760px) { .topbar { height: 65px; padding: 0 16px; gap: 12px; }.brand { font-size: 17px; }.brand-mark { width: 29px; height: 29px; }.topbar nav button { padding: 8px; font-size: 12px; }.avatar { width: 31px; height: 31px; }.content { padding: 32px 16px 55px; }.welcome-row { align-items: flex-start; flex-direction: column; }.streak-card { min-width: auto; }.practice-grid, .result-grid, .stats-grid { grid-template-columns: 1fr; }.lesson-card, .capture-card, .result-section { padding: 20px; }.analyze-bar { align-items: stretch; flex-direction: column; }.primary { width: 100%; }.result-heading { align-items: flex-start; }.char { width: 32px; height: 39px; }.result-actions { flex-direction: column; }.result-actions button { width: 100%; }.stats-grid .wide { grid-column: auto; } }
+
+/* Calm dark theme */
+:root { color: #e8edf5; background: #101722; }
+body { background: radial-gradient(circle at 80% 0%, #26354c 0, transparent 32%), #101722; }
+.topbar { background: rgba(17, 25, 37, .9); border-color: #2b3748; }
+.brand { color: #f3f6fb; }
+nav button { color: #a9b5c5; }
+nav button.active { color: #ffb09d; background: #3a2a30; }
+.avatar, .record-avatar { background: #3a3021; color: #ffd38a; }
+.eyebrow { color: #ff9c83; }
+.streak-card { background: #302a22; color: #f4cb83; }
+.card { background: rgba(24, 34, 49, .94); border-color: #314054; box-shadow: 0 12px 35px rgba(0, 0, 0, .2); }
+.section-label { color: #d9e1ec; }
+.lesson-picker button { color: #b8c3d0; background: #202b3a; }
+.lesson-picker small { color: #8e9aaa; }
+.lesson-picker button.selected { background: #3c2b31; box-shadow: inset 0 0 0 1px #e77d68; color: #ffad98; }
+.copy-paper { background: repeating-linear-gradient(#1b2736, #1b2736 32px, #334b61 33px, #1b2736 34px); border-color: #3a4a5e; }
+.copy-paper p { color: #d8e7fb; }
+.copy-paper small, .name-field { color: #aeb9c7; }
+.name-field input { color: #edf2f9; border-color: #536276; }
+.camera-empty { color: #bdc8d7; background: #1a2635; border-color: #4d6176; }
+.camera-empty span { color: #91a0b2; }
+.preview { border-color: #3a4a5c; }
+.secondary { color: #d5dee9; background: #202c3b; border-color: #425167; }
+.secondary:hover { background: #2a384a; }
+.tip, .demo-note, .feedback { background: #302c20; color: #ded19d; }
+.analyze-bar { color: #b8c3d0; }
+.result-section { background: #1d2938; border-color: #3b4b60; }
+.score { background: #283545; color: #ff9c83; }
+.score span { color: #afbac7; }
+.source-mini img { border-color: #3b4b60; }
+.confidence { color: #f2c38c; background: #403426; }
+.char-row { background: #182331; }
+.legend { color: #b7c2d0; }
+.teacher-note label { color: #bcc7d5; }
+.teacher-note textarea { color: #e9eff7; background: #192432; border-color: #425168; }
+.records-header { border-color: #334256; }
+.records-header p, .record p { color: #aebaca; }
+.records-header > span { color: #ffad98; background: #3b2a31; }
+.record { border-color: #2f3d50; }
+.record small, .empty-record { color: #8998aa; }
+.stat.wide b { color: #d7e0ec; }
